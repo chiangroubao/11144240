@@ -1,0 +1,566 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e7ebf1;
+    color: #38424D;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #7d91a6;
+    padding: 26px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1030; 
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 66px;
+    text-align: center;
+    margin: 10px 0px -100px 0px;
+    
+    background-color: #a1b1cb;
+    top: 76px; 
+    word-spacing: 50px;
+    padding: 8px 16px;
+    z-index: 20; // 低于header的z-index
+}
+
+nav a {
+    padding: 17px 5px;
+    text-decoration: none;
+justify-self:center;
+    color: #38424D;
+    display: inline-block;
+    z-index: 0; 
+}
+
+    
+main {
+    padding-top: 100px; // 调整此值以匹配header和nav的总高度
+}
+
+
+
+
+nav a:hover {
+    background-color: #92afd6;
+
+}
+
+
+footer {
+    background-color: #95aac1;
+    color: #444444;
+    text-align: center;
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    nav {
+        word-spacing: normal;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+    .profile-card, .profile-card01, .profile-card03 {
+        flex-direction: column;
+        width: 95%;
+        padding: 20px;
+    }
+    .image-container, .image-container01 {
+        width: 100%;
+    }
+}
+
+:target {
+    padding-top: 100px;      
+    margin-top: -100px;     
+    display: block;          
+}
+
+
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 15px;
+    margin: 20px auto; 
+    width: 80%; 
+    padding: 40px; 
+
+}
+
+.profile-card03 {
+
+    align-items: center;
+    background: #ffffff;
+    border-radius: 15px;
+    margin: 20px auto; 
+    width: 80%; 
+    padding: 40px; 
+
+}
+
+  
+.image-container {
+    flex: 0 0 30%;
+
+    text-align: center;
+    
+}
+
+.image-container img {
+    width: 100%; 
+    height: auto;
+    border-radius: 50%;
+}
+
+.text-container {
+    flex:0 0 70%;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 40px; 
+    height: 40px;
+    margin: 0 15px; 
+    border-radius: 50%;
+}
+
+.track {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: #ffffff;
+}
+.card{
+    font-weight:600;
+    text-align: center;
+    margin: 0%;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    font-size: 23px;
+
+    overflow: hidden;
+    margin-left:10%; 
+}
+
+.filler {
+    position: absolute;
+    height: 100%;
+    background-color: #28598A;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #ffffff;
+    padding-right: 5px;
+    animation: fillTrack 3s forwards;
+}
+.filler::after {
+    content: attr(data-percentage) '%'; 
+    white-space: nowrap; 
+}
+
+@keyframes fillTrack {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--percentage); 
+    }
+}
+
+.photo-set {
+    height: 250px;
+    margin-bottom: 20px; 
+    position: relative; 
+    flex: 0 0 30%;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    animation: slide-animation 14s infinite linear; /* 确保使用线性时间函数以保持速度一致 */
+}
+
+@keyframes slide-animation {
+    /* 每张图片显示2秒，剩余时间为淡入淡出 */
+    0%, 14.29%, 100% { opacity: 0; }
+    1.43%, 12.86% { opacity: 1; } /* 第一张图片 */
+    14.29%, 26.86% { opacity: 1; } /* 第二张图片 */
+    28.57%, 41.14% { opacity: 1; } /* 第三张图片 */
+    42.85%, 55.42% { opacity: 1; } /* 第四张图片 */
+    57.13%, 69.70% { opacity: 1; } /* 第五张图片 */
+    71.41%, 83.98% { opacity: 1; } /* 第六张图片 */
+    85.69%, 98.26% { opacity: 1; } /* 第七张图片 */
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 2s; }
+.slide:nth-child(3) { animation-delay: 4s; }
+.slide:nth-child(4) { animation-delay: 6s; }
+.slide:nth-child(5) { animation-delay: 8s; }
+.slide:nth-child(6) { animation-delay: 10s; }
+.slide:nth-child(7) { animation-delay: 12s; }
+
+
+  
+  h2 {
+    text-align: center;
+  }
+
+
+.area{
+
+    position:relative;
+    display: flex;
+    margin:-20px 50px -20px 50px;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+
+
+}
+.area01{
+
+
+
+    position:relative;
+
+    margin: 0px 7% 0px 10%;
+    padding: 0.5%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    justify-self:center;
+
+
+}
+p{
+margin: 10px 0px;
+}
+.text{
+    font-size: 20px;
+    font-weight:500;
+    color: #7d91a6;
+    text-align: left;
+    padding: 5px;
+
+
+}
+.text01{
+    font-size: 20px;
+    font-weight:600;
+    color:#38424D;
+    text-align: center;}
+
+    .skills-container {
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-around; 
+        align-items: center; 
+        width: 100%; 
+    }
+    
+    .skill-container {
+        text-align: center;
+        margin: 10px; 
+        flex: 1; 
+        min-width: 150px; 
+    }
+    
+    .track01 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: inline-block;
+        background: #FFFFFF; 
+        position: relative;
+        overflow: hidden;
+        margin: 5px auto; 
+    }
+    
+    .filler01 {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        background-image: conic-gradient(#B8D8E5 0% var(--pie-size, 0%), #FFFFFF var(--pie-size, 0%) 100%);
+        transition: background-image 0.5s ease-out;
+    }
+    
+    .center-percentage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-weight: bold;
+        color: #333; 
+    }
+    
+    
+    .profile-card01 {
+        display: flex;
+        background: #849BB8;
+        border-radius: 15px;
+        margin: 20px auto; 
+        width: 80%; 
+        padding: 30px;
+        flex-direction:column;
+        text-align: left;
+        font-size: 15px;
+    
+    }
+    .profile-card04 {
+        display: flex;
+        background: #849BB8;
+        border-radius: 15px;
+        margin: 20px auto; 
+        width: 80%; 
+        padding: 30px;
+        flex-direction:column;
+        text-align: left;
+        flex-direction: row; 
+        font-size: 15px;
+    
+    }
+    .profile-card02 {
+        align-items: center;
+        background: #ffffff;
+        border-radius: 15px;
+        margin: 20px auto; 
+        width: 80%; 
+        padding: 40px; 
+        height:380px; 
+        display: flex;
+
+
+  
+        padding: 30px;
+        flex-direction:column;
+
+        font-size: 15px;
+    
+    }
+    .timeline-container {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        padding-top: 50px;
+    }
+    
+    .timeline-line {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+
+    }
+    
+    .time-point {
+        padding-top: 18px;
+        position: absolute;
+        width: 18px; /* 初始大小 */
+        height: 18px; /* 初始大小 */
+        border-radius: 50%;
+        background-color: #555;
+        cursor: pointer;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease; /* 平滑過渡效果 */
+    }
+    
+    .time-point:hover {
+        width: 20px; /* hover 狀態下的大小 */
+        height: 20px; /* hover 狀態下的大小 */
+        background-color: #ffffff; /* 變為空心 */
+        border: 3px solid #555; /* 添加邊框以形成空心效果 */
+        box-shadow: 0 0 5px rgba(0,0,0,0.2); /* 添加陰影效果增強視覺 */
+    }
+    
+    .time-label {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 12px;
+        transition: opacity 0.3s ease; /* 文字出現時的過渡效果 */
+    }
+.description {
+        display: none;
+        position: absolute;
+        top: 25px; /* 根據需要調整位置 */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        z-index: 1;
+        font-size: 18px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .time-point:hover .description {
+        display: block; /* 確保在 hover 時顯示說明文字 */
+    }
+    
+   
+
+    
+ 
+    @media (max-width: 768px) {
+        .profile-card03 {
+            flex-direction: column;
+            width: 95%;
+            padding: 20px;
+        }
+    }
+    .photo{
+        display: flex;
+        justify-content: center;
+
+
+      }
+      
+      .photo img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-card04 {
+        display: flex;
+        flex-direction: row; /* Ensure horizontal layout */
+        justify-content: space-around; /* Distribute space evenly */
+        background: #849BB8;
+        border-radius: 15px;
+        margin: 20px auto;
+        width: 80%;
+        padding: 30px;
+        text-align: left;
+        font-size: 15px;
+    }
+    
+    .image-container02 {
+        width: auto;
+        flex: 2; /* Equal flex basis for each container */
+        position: relative;
+        margin: 0 30px; 
+/* Adds spacing between the images */
+    }
+    
+    .image-container02 img {
+        width: 100%;
+        height: auto;
+        transition: opacity 0.3s ease;
+    }
+    
+    .description02 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: -0.03px;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        text-align: center; 
+        font-size: 1em;
+    }
+    
+    .image-container02:hover img {
+        opacity: 0;
+    }
+    
+    .image-container02:hover .description02 {
+        opacity: 1;
+    }
+    
+    /* Arrow styling */
+    .image-container02:not(:last-child)::after {
+        content: "➔"; /* Arrow symbol */
+        position: absolute;
+        right: -40px; /* Position the arrow outside the container */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: white;
+    }
+    
+    /* Adjust margin for first and last items */
+    .image-container02:first-child {
+        margin-left: 0;
+    }
+    .image-container02:last-child {
+        margin-right: 0;
+    }
+    .figure {
+        flex: 1; /* Each figure takes equal space */
+        margin: 10px; /* Space between figures */
+    }
+    
+    img {
+        width: 100%; /* Full width of the figure container */
+        height: 160px;
+        border-radius: 10px;
+    }
+    
+    figcaption {
+        font-size: 14px;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }

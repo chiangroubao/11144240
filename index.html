@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人簡歷</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var fillers = document.querySelectorAll('.filler');
+          fillers.forEach(function(filler) {
+              var percentage = filler.getAttribute('data-percentage');
+              filler.style.setProperty('--percentage', percentage + '%');
+          });
+      });
+      </script>
+  </head>
+  <body>
+
+    <header>
+      <h1>個人履歷網站</h1>
+    </header>
+
+      <br>
+      <br>
+
+    <main>
+    <nav>
+      <a href="#about">關於我</a>
+      <a href="#skill">技能</a>
+      <a href="#experience">個人經歷</a>
+      <a href="#interest">興趣及專長</a>
+    </nav>
+    </main>
+
+    
+    <br>
+    <h2 class="card" id="about">關於我</h2>
+    <aside class="profile-card">
+      <div class="image-container">
+          <img src="image/4.png"  style="border-radius: 50%;">
+      </div>
+      <div class="text-container">
+          <div class="text01">個人資訊</div>
+          <br>
+          <p>姜閔芸</p>
+          <p>肉包</p>
+          <p>新竹縣竹北</p>
+          <p>中原大學資訊管理系</p>
+          <p>2004.05.23</p>
+          <p>ENFP</p>
+          <p>有趣都藏在無聊的日子裡</p>
+          <br>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/roubao04/?next=%2F"><img src="image/1.png" alt="Instagram" style="border-radius: 50%"></a>
+            <a href="https://www.threads.net/@roubao04"><img src="image/5.png" alt="threads" style="border-radius: 50%"></a>
+            <a href="https://www.facebook.com/profile.php?id=100004668155824&locale=zh_TW"><img src="image/3.png" alt="Facebook" style="border-radius: 50%"></a>
+            <a href="https://line.me/ti/p/Lekv5jDUrW"><img src="image/2.png" alt="line" style="border-radius: 50%"></a>
+            </div>
+      </div>
+  </aside>
+  
+  <h2 class="card" id="skill">技能</h2>
+  <aside class="profile-card01">
+
+    <div class="skills-container">
+      <div class="skill-container">
+          <p>JSP & MYSQL</p>
+          <div class="track01">
+              <div class="filler01" data-percentage="73"></div>
+              <span class="center-percentage">0%</span>
+          </div>
+
+      </div>
+  
+      <div class="skill-container">
+          <p>CSS & HTML</p>
+          <div class="track01">
+              <div class="filler01" data-percentage="80"></div>
+              <span class="center-percentage">0%</span>
+          </div>
+
+      </div>
+  
+      <div class="skill-container">
+          <p>JAVA</p>
+          <div class="track01">
+              <div class="filler01" data-percentage="76"></div>
+              <span class="center-percentage">0%</span>
+          </div>
+
+      </div>
+  
+      <div class="skill-container">
+          <p>PYTHON</p>
+          <div class="track01">
+              <div class="filler01" data-percentage="76"></div>
+              <span class="center-percentage">0%</span>
+          </div>
+
+      </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.track01').forEach(function(track) {
+        const filler = track.querySelector('.filler01');
+        const centerPercentage = track.querySelector('.center-percentage');
+        let currentPercentage = 0;
+        const targetPercentage = parseInt(filler.getAttribute('data-percentage'), 10);
+
+        const interval = setInterval(function() {
+            if (currentPercentage < targetPercentage) {
+                currentPercentage++;
+                filler.style.setProperty('--pie-size', `${currentPercentage}%`);
+                centerPercentage.textContent = currentPercentage + '%';
+            } else {
+                clearInterval(interval);
+            }
+        }, 20);
+    });
+});
+
+
+  </script>
+      </aside>
+      <aside class="profile-card01">
+        <p>
+          Word
+        </p>
+      
+      
+        <div class="track">
+          <div class="filler" data-percentage="80"></div>
+      </div>
+        <br>
+        <p>
+          PowerPoint
+      </p>
+    
+      <div class="track">
+        <div class="filler" data-percentage="85"></div>
+    </div>
+    <br>
+    <p>
+      Excel
+    </p>
+    <div class="track">
+      <div class="filler" data-percentage="75"></div>
+  </div>
+    
+    
+   
+        
+        
+      </aside>
+      <aside class="profile-card04">
+        
+          <figure class="figure">
+              <img src="image/6.png" alt="Description of image">
+              <figcaption>會計事務-資訊 丙級</figcaption>
+          </figure>
+          <figure class="figure">
+              <img src="image/7.png" alt="Description of image">
+              <figcaption>電腦軟體應用 乙級</figcaption>
+          </figure>
+          <figure class="figure">
+              <img src="image/8.png" alt="Description of image">
+              <figcaption>商業英檢 四級</figcaption>
+          </figure>
+      
+      </aside>
+    
+    </div>
+
+
+
+    
+<h2 class="card" id="experience">個人經歷</h2>
+
+
+
+<aside class="profile-card03">
+  <div class="image-container01">
+    <div class="text01">社團經歷</div>
+    <br>
+    <br>
+
+
+  <div class="area">
+    <div class="photo-set">
+    <div class="slideshow">
+
+      <div class="slide" style="background-image: url('image/cyim/1.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyim/2.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyim/3.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyim/5.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyim/7.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyim/8.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyim/10.JPG');"></div>
+
+    </div>
+    </div>
+
+
+    <div class="photo-set">
+    <div class="slideshow">
+
+      <div class="slide" style="background-image: url('image/cytk/2.JPEG');"></div>
+      <div class="slide" style="background-image: url('image/cytk/12.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cytk/14.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cytk/19.JPEG');"></div>
+      <div class="slide" style="background-image: url('image/cytk/4.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cytk/6.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cytk/8.JPG');"></div>
+
+
+    </div>
+    </div>
+
+    <div class="photo-set">
+    <div class="slideshow">
+
+      <div class="slide" style="background-image: url('image/cyesl/1.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyesl/2.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyesl/3.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyesl/4.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyesl/5.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyesl/6.JPG');"></div>
+      <div class="slide" style="background-image: url('image/cyesl/7.JPG');"></div>
+</div>
+    </div>
+</div>
+<div class="area01">
+
+  <ul>
+    <div class="text">資管系學會</div>
+    <li><p>35屆執行秘書</p></li>
+    <li><p>資管之夜主持</p></li>
+    <li><p>食字路口隊輔</p></li>
+    
+    <li><p>資識王活動組</p></li>
+
+    <li><p>大運會活動組</p></li>
+    
+
+
+  </ul>
+
+<ul>
+<div class="text">基北聯誼會</div>
+<li><p>10屆公關長</p></li>
+<li><p>迎新桌遊總召</p></li>
+
+<li><p>期初社員大會家長</p></li>
+
+
+<li><p>返鄉服務隊輔長級</p></li>
+
+<li><p>社出遊副召</p></li>
+
+
+
+</ul>
+
+
+<ul>
+<div class="text">環境服務學習</div>
+<li><p>帶班小組長</p></li>
+
+<li><p>布置女孩的堡壘中原場</p></li>
+
+<li><p>小隊聚</p></li>
+
+<li><p>幹部訓練</p></li>
+
+
+</ul>
+</div>
+
+  </div>
+</aside>
+    <aside class="profile-card02">
+      <div class="text01">工作經歷</div>
+      <br><br>
+      <div class="timeline-container">
+          <div class="timeline-line"></div>
+          <div class="time-point" data-month="2020.12" style="left: 15%;">
+              <div class="time-label">2020.11 - 2021.10</div>
+              <div class="description">
+                <div class="photo"><img src="image/work/5.png" alt="鍋賣局火鍋店" ></div>
+                  鍋賣局火鍋店<br>外場人員
+              </div>
+          </div>
+          <div class="time-point" data-month="2022.8" style="left: 50%;">
+            <div class="time-label">2022.7 - 2022.9</div>
+            <div class="description">
+              
+              <div class="photo"><img src="image/work/6.jpg" alt="力成科技股份有限公司" ></div>
+              力成科技股份有限公司 <br>技術員
+            </div>
+        </div>  <div class="time-point" data-month="2022.8" style="left: 85%;">
+          <div class="time-label">2023.7 - 現今</div>
+          <div class="description">
+             <div class="photo"> <img src="image/work/4.png" alt="力成科技股份有限公司" ></div>
+              金色三麥 lebledor <br>外場人員
+          </div>
+      </div>
+  
+      </div>
+  </aside>
+
+    <h2 class="card" id="interest">興趣與專長</h2>
+    <aside class="profile-card01">
+      <div class="text01">專長與興趣</div>
+      
+      <div class="profile-card04">
+        <div class="image-container02">
+            <img src="image/dance/1.JPG" alt="Image 1">
+            <span class="description02">
+              <p>舞風：民俗舞、現代舞<br><br>
+                舞齡：7年（小一到國一）<br><br>
+                民俗舞:展現各地不同環境<br>種族及風俗<br><br>
+                現代舞：表演美學和自由舞蹈<br>新形式和訓練方法<br><br>
+                照片：105學年度新竹縣賽<br>國中B團體乙組榮獲優等</p>
+
+            </span>
+        </div>
+        <div class="image-container02">
+            <img src="image/dance/3.JPG" alt="Image 2">
+            <span class="description02"> 
+               <p>舞風：JAZZ、girl style<br><br>
+              舞齡：3年（高一到高三）<br><br>
+              JAZZ:多元化節奏型舞蹈<br>舞步結合剛與柔的特性<br><br>
+              girl style：專屬於女生的FreeStyle<br>表現出屬 於女性的性感魅力<br><br>
+              照片：高中動動會社團表演</p>
+            </span>
+        </div>
+        <div class="image-container02">
+            <img src="image/dance/2.JPG" alt="Image 3">
+            <span class="description02">
+              <p>舞風：K-pop<br><br>
+                舞齡：高三到現今<br><br>
+                K-pop:韓國流行音樂<br>風格融合多種元素<br><br>
+                照片：大運三系活動組表演</p>
+
+
+            </span>
+        </div>
+      </div>
+    
+    <br>
+
+    </aside>
+    
+  
+  <footer>
+    <h5> @ 2024 肉包 Personal resume website</h5>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // 当DOM完全加载后执行
+    const headerHeight = document.querySelector('header').offsetHeight; // 获取header的高度
+    const navHeight = document.querySelector('nav').offsetHeight; // 获取nav的高度
+    const totalOffset = headerHeight + navHeight; // 总偏移量为header和nav的高度之和
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止链接的默认跳转行为
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // 计算目标元素的位置并减去总偏移量
+                window.scrollTo({
+                    top: targetElement.offsetTop - totalOffset,
+                    behavior: 'smooth' // 平滑滚动
+                });
+            }
+        });
+    });
+});
+
+</script>
+
+
+</body>
+</html>
