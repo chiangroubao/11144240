@@ -360,23 +360,23 @@
   </footer>
   <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // 当DOM完全加载后执行
-    const headerHeight = document.querySelector('header').offsetHeight; // 获取header的高度
-    const navHeight = document.querySelector('nav').offsetHeight; // 获取nav的高度
-    const totalOffset = headerHeight + navHeight; // 总偏移量为header和nav的高度之和
+   
+    const headerHeight = document.querySelector('header').offsetHeight; 
+    const navHeight = document.querySelector('nav').offsetHeight; 
+    const totalOffset = headerHeight + navHeight; 
 
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault(); // 阻止链接的默认跳转行为
+            e.preventDefault(); 
 
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                // 计算目标元素的位置并减去总偏移量
+    
                 window.scrollTo({
                     top: targetElement.offsetTop - totalOffset,
-                    behavior: 'smooth' // 平滑滚动
+                    behavior: 'smooth' 
                 });
             }
         });
