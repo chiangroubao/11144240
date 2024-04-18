@@ -47,7 +47,7 @@ justify-self:center;
 
     
 main {
-    padding-top: 100px; // 调整此值以匹配header和nav的总高度
+    padding-top: 100px; 
 }
 
 
@@ -217,19 +217,19 @@ footer {
     background-position: center;
     position: absolute;
     opacity: 0;
-    animation: slide-animation 14s infinite linear; /* 确保使用线性时间函数以保持速度一致 */
+    animation: slide-animation 14s infinite linear; 
 }
 
 @keyframes slide-animation {
-    /* 每张图片显示2秒，剩余时间为淡入淡出 */
+
     0%, 14.29%, 100% { opacity: 0; }
-    1.43%, 12.86% { opacity: 1; } /* 第一张图片 */
-    14.29%, 26.86% { opacity: 1; } /* 第二张图片 */
-    28.57%, 41.14% { opacity: 1; } /* 第三张图片 */
-    42.85%, 55.42% { opacity: 1; } /* 第四张图片 */
-    57.13%, 69.70% { opacity: 1; } /* 第五张图片 */
-    71.41%, 83.98% { opacity: 1; } /* 第六张图片 */
-    85.69%, 98.26% { opacity: 1; } /* 第七张图片 */
+    1.43%, 12.86% { opacity: 1; } 
+    14.29%, 26.86% { opacity: 1; } 
+    28.57%, 41.14% { opacity: 1; } 
+    42.85%, 55.42% { opacity: 1; } 
+    57.13%, 69.70% { opacity: 1; }
+    71.41%, 83.98% { opacity: 1; } 
+    85.69%, 98.26% { opacity: 1; } 
 }
 
 .slide:nth-child(1) { animation-delay: 0s; }
@@ -404,22 +404,22 @@ margin: 10px 0px;
     .time-point {
         padding-top: 18px;
         position: absolute;
-        width: 18px; /* 初始大小 */
-        height: 18px; /* 初始大小 */
+        width: 18px; 
+        height: 18px; 
         border-radius: 50%;
         background-color: #555;
         cursor: pointer;
         top: 50%;
         transform: translate(-50%, -50%);
-        transition: all 0.3s ease; /* 平滑過渡效果 */
+        transition: all 0.3s ease; 
     }
     
     .time-point:hover {
-        width: 20px; /* hover 狀態下的大小 */
-        height: 20px; /* hover 狀態下的大小 */
-        background-color: #ffffff; /* 變為空心 */
-        border: 3px solid #555; /* 添加邊框以形成空心效果 */
-        box-shadow: 0 0 5px rgba(0,0,0,0.2); /* 添加陰影效果增強視覺 */
+        width: 20px; 
+        height: 20px; 
+        background-color: #ffffff;
+        border: 3px solid #555; 
+         box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
     
     .time-label {
@@ -429,12 +429,12 @@ margin: 10px 0px;
         transform: translateX(-50%);
         white-space: nowrap;
         font-size: 12px;
-        transition: opacity 0.3s ease; /* 文字出現時的過渡效果 */
+        transition: opacity 0.3s ease; 
     }
 .description {
         display: none;
         position: absolute;
-        top: 25px; /* 根據需要調整位置 */
+        top: 25px;
         left: 50%;
         transform: translateX(-50%);
         width: 250px;
@@ -449,7 +449,7 @@ margin: 10px 0px;
     }
     
     .time-point:hover .description {
-        display: block; /* 確保在 hover 時顯示說明文字 */
+        display: block;
     }
     
    
@@ -477,8 +477,8 @@ margin: 10px 0px;
 
       .profile-card04 {
         display: flex;
-        flex-direction: row; /* Ensure horizontal layout */
-        justify-content: space-around; /* Distribute space evenly */
+        flex-direction: row;
+        justify-content: space-around;
         background: #849BB8;
         border-radius: 15px;
         margin: 20px auto;
@@ -490,10 +490,10 @@ margin: 10px 0px;
     
     .image-container02 {
         width: auto;
-        flex: 2; /* Equal flex basis for each container */
+        flex: 2; 
         position: relative;
         margin: 0 30px; 
-/* Adds spacing between the images */
+
     }
     
     .image-container02 img {
@@ -529,18 +529,18 @@ margin: 10px 0px;
         opacity: 1;
     }
     
-    /* Arrow styling */
+
     .image-container02:not(:last-child)::after {
-        content: "➔"; /* Arrow symbol */
+        content: "➔"; 
         position: absolute;
-        right: -40px; /* Position the arrow outside the container */
+        right: -40px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 24px;
         color: white;
     }
     
-    /* Adjust margin for first and last items */
+
     .image-container02:first-child {
         margin-left: 0;
     }
@@ -548,12 +548,12 @@ margin: 10px 0px;
         margin-right: 0;
     }
     .figure {
-        flex: 1; /* Each figure takes equal space */
-        margin: 10px; /* Space between figures */
+        flex: 1; 
+        margin: 10px; 
     }
     
     img {
-        width: 100%; /* Full width of the figure container */
+        width: 100%; 
         height: 160px;
         border-radius: 10px;
     }
